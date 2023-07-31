@@ -4,7 +4,7 @@
 rm -rf xolpanel.sh
 apt update && apt upgrade
 apt install python3 python3-pip git
-git clone https://github.com/givpn/xolpanel.git
+git clone https://github.com/joexmaster1/xolpanel.git
 unzip xolpanel/xolpanel.zip
 pip3 install -r xolpanel/requirements.txt
 pip3 install pillow
@@ -14,9 +14,11 @@ echo ""
 read -e -p "[*] Input your Bot Token : " bottoken
 read -e -p "[*] Input Your Id Telegram :" admin
 read -e -p "[*] Input Your Subdomain :" domain
+read -e -p "[*] Input Your NSdomain :" sldomain
 echo -e BOT_TOKEN='"'$bottoken'"' >> /root/xolpanel/var.txt
 echo -e ADMIN='"'$admin'"' >> /root/xolpanel/var.txt
 echo -e DOMAIN='"'$domain'"' >> /root/xolpanel/var.txt
+echo -e SLDOMAIN='"'$sldomain'"' >> /root/xolpanel/var.txt
 clear
 echo "Done"
 echo "Your Data Bot"
@@ -24,6 +26,8 @@ echo -e "==============================="
 echo "Bot Token     : $bottoken"
 echo "Id Telegram   : $admin"
 echo "Subdomain     : $domain"
+echo "NSdomain      : $sldomain"
+
 echo -e "==============================="
 echo "Setting done Please wait 10s"
 sleep 10
